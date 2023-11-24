@@ -1,4 +1,4 @@
-package com.example.coroutinesdemo2
+package com.example.demokotlin2
 
 import org.junit.Test
 
