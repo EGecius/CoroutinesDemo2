@@ -1,8 +1,8 @@
-package com.egecius.coroutinesdemo
+package com.example.coroutinesdemo2
 
-import com.egecius.coroutinesdemo.fakes.FakeCall
-import com.egecius.coroutinesdemo.fakes.FakeRetrofitService
-import com.egecius.coroutinesdemo.util.MainCoroutineRule
+import com.example.coroutinesdemo2.fakes.FakeCall
+import com.example.coroutinesdemo2.fakes.FakeRetrofitService
+import com.example.coroutinesdemo2.util.MainCoroutineRule
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.test.runBlockingTest
 import org.assertj.core.api.Assertions.assertThat

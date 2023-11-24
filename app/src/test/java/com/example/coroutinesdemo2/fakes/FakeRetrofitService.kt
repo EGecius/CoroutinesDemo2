@@ -1,6 +1,6 @@
 @file:Suppress("MemberVisibilityCanBePrivate")
 
-package com.egecius.coroutinesdemo.fakes
+package com.example.coroutinesdemo2.fakes
 
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 

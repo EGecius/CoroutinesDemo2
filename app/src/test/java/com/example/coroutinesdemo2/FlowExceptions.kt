@@ -1,6 +1,7 @@
-package com.egecius.coroutinesdemo
+package com.example.coroutinesdemo2
 
 import app.cash.turbine.test
+import com.example.coroutinesdemo2.EgisException
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow

@@ -1,4 +1,4 @@
-package com.egecius.coroutinesdemo.util
+package com.example.coroutinesdemo2.util
 
 import kotlinx.coroutines.CoroutineName
 import kotlinx.coroutines.CoroutineScope

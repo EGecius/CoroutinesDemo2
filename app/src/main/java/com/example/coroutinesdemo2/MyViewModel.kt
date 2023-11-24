@@ -2,9 +2,6 @@ package com.example.coroutinesdemo2
 
 import android.util.Log
 import androidx.lifecycle.*
-import com.egecius.coroutinesdemo.EgisException
-import com.egecius.coroutinesdemo.FakeItem
-import com.egecius.coroutinesdemo.FakeRepo
 import kotlinx.coroutines.CoroutineExceptionHandler
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch

@@ -1,4 +1,4 @@
-package com.egecius.coroutinesdemo
+package com.example.coroutinesdemo2
 
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.flow.*

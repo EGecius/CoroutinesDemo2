@@ -1,5 +1,7 @@
-package com.egecius.coroutinesdemo
+package com.example.coroutinesdemo2
 
+import com.example.coroutinesdemo2.FakeItem
+import com.example.coroutinesdemo2.FakeRepo
 import io.kotest.matchers.shouldBe
 import io.mockk.coEvery
 import io.mockk.mockk

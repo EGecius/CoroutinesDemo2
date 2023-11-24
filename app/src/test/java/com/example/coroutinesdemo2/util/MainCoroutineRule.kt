@@ -16,7 +16,7 @@
 
 @file:Suppress("EXPERIMENTAL_API_USAGE")
 
-package com.egecius.coroutinesdemo.util
+package com.example.coroutinesdemo2.util
 
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.Dispatchers

@@ -1,6 +1,6 @@
-package com.egecius.coroutinesdemo
+package com.example.coroutinesdemo2
 
-import com.egecius.coroutinesdemo.fakes.FakeActivity
+import com.example.coroutinesdemo2.fakes.FakeActivity
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.runBlocking
 import org.junit.Test

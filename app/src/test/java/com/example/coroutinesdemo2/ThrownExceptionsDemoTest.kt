@@ -1,6 +1,6 @@
 @file:Suppress("IMPLICIT_NOTHING_AS_TYPE_PARAMETER")
 
-package com.egecius.coroutinesdemo
+package com.example.coroutinesdemo2routinesdemo
 
 import kotlinx.coroutines.*
 import kotlinx.coroutines.test.runBlockingTest

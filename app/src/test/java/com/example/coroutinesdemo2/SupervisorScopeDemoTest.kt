@@ -1,7 +1,7 @@
-package com.egecius.coroutinesdemo
+package com.example.coroutinesdemo2
 
-import com.egecius.coroutinesdemo.util.failingCoroutine
-import com.egecius.coroutinesdemo.util.nonFailingCoroutine
+import com.example.coroutinesdemo2.util.failingCoroutine
+import com.example.coroutinesdemo2.util.nonFailingCoroutine
 import kotlinx.coroutines.*
 import kotlinx.coroutines.test.runBlockingTest
 import org.junit.Ignore

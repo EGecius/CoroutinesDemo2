@@ -1,7 +1,7 @@
-package com.egecius.coroutinesdemo
+package com.example.coroutinesdemo2
 
 import androidx.lifecycle.asLiveData
-import com.egecius.coroutinesdemo.util.MainCoroutineRule
+import com.example.coroutinesdemo2.util.MainCoroutineRule
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.flow.flowOf
 import kotlinx.coroutines.flow.onStart

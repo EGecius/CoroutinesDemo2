@@ -1,8 +1,8 @@
-package com.egecius.coroutinesdemo
+package com.example.coroutinesdemo2
 
 import app.cash.turbine.test
-import com.egecius.coroutinesdemo.util.neverEndingEmittingFlow
-import com.egecius.coroutinesdemo.util.neverEndingEmptyFlow
+import com.example.coroutinesdemo2.util.neverEndingEmittingFlow
+import com.example.coroutinesdemo2.util.neverEndingEmptyFlow
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.flow.flowOf

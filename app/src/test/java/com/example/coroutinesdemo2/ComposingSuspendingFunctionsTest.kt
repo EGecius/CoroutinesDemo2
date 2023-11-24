@@ -1,6 +1,6 @@
 @file:Suppress("MemberVisibilityCanBePrivate")
 
-package com.egecius.coroutinesdemo
+package com.example.coroutinesdemo2
 
 import kotlinx.coroutines.*
 import org.assertj.core.api.Assertions.assertThat

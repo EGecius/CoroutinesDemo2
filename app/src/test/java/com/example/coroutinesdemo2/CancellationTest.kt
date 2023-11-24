@@ -1,5 +1,6 @@
-package com.egecius.coroutinesdemo
+package com.example.coroutinesdemo2
 
+import com.example.coroutinesdemo2.EgisException
 import kotlinx.coroutines.*
 import kotlinx.coroutines.test.runBlockingTest
 import org.assertj.core.api.Assertions.assertThat

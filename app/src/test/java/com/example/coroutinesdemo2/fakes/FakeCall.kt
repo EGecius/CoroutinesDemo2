@@ -1,6 +1,6 @@
-package com.egecius.coroutinesdemo.fakes
+package com.example.coroutinesdemo2.fakes
 
-import com.egecius.coroutinesdemo.fakes.FakeCall.Companion.FAKE_RESULT
+import com.example.coroutinesdemo2.fakes.FakeCall.Companion.FAKE_RESULT
 import kotlinx.coroutines.CancellableContinuation
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.suspendCancellableCoroutine

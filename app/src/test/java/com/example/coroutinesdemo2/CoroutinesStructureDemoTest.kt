@@ -1,12 +1,10 @@
 @file:Suppress("UsePropertyAccessSyntax")
 
-package com.egecius.coroutinesdemo
+package com.example.coroutinesdemo2
 
-import com.egecius.coroutinesdemo.util.MainCoroutineRule
-import io.kotest.matchers.shouldBe
+import com.example.coroutinesdemo2.util.MainCoroutineRule
+import com.example.coroutinesdemo2.AsyncAwaitActivity
 import kotlinx.coroutines.*
-import kotlinx.coroutines.Dispatchers.Main
-import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.test.runBlockingTest
 import org.assertj.core.api.Assertions.assertThat
@@ -14,12 +12,9 @@ import org.junit.Before
 import org.junit.Ignore
 import org.junit.Rule
 import org.junit.Test
-import org.junit.rules.TestRule
 import org.junit.runner.RunWith
 import org.mockito.junit.MockitoJUnitRunner
 import java.lang.Thread.sleep
-import java.net.UnknownHostException
-import java.util.concurrent.CancellationException
 
 @ExperimentalCoroutinesApi
 @RunWith(MockitoJUnitRunner::class)

@@ -1,6 +1,7 @@
-package com.egecius.coroutinesdemo
+package com.example.coroutinesdemo2
 
 import app.cash.turbine.test
+import com.example.coroutinesdemo2.EgisData
 import io.kotest.matchers.shouldBe
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow

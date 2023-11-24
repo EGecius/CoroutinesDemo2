@@ -1,7 +1,7 @@
-package com.egecius.coroutinesdemo
+package com.example.coroutinesdemo2
 
 import app.cash.turbine.test
-import com.egecius.coroutinesdemo.util.MainCoroutineRule
+import com.example.coroutinesdemo2.util.MainCoroutineRule
 import io.kotest.matchers.shouldBe
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.flow.Flow

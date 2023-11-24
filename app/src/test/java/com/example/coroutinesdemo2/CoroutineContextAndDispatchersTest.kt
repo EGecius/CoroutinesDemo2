@@ -1,7 +1,7 @@
-package com.egecius.coroutinesdemo
+package com.example.coroutinesdemo2
 
 import android.util.Log
-import com.egecius.coroutinesdemo.util.log
+import com.example.coroutinesdemo2.util.log
 import io.kotest.matchers.shouldBe
 import kotlinx.coroutines.*
 import kotlinx.coroutines.Dispatchers.IO

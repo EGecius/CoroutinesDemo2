@@ -1,10 +1,11 @@
 @file:Suppress("UsePropertyAccessSyntax")
 
-package com.egecius.coroutinesdemo
+package com.example.coroutinesdemo2
 
 import androidx.lifecycle.viewModelScope
-import com.egecius.coroutinesdemo.util.MainCoroutineRule
-import com.egecius.coroutinesdemo.util.failingCoroutine
+import com.example.coroutinesdemo2.util.MainCoroutineRule
+import com.example.coroutinesdemo2.util.failingCoroutine
+import com.example.coroutinesdemo2.EgisException
 import com.example.coroutinesdemo2.MyViewModel
 import kotlinx.coroutines.*
 import kotlinx.coroutines.test.runBlockingTest

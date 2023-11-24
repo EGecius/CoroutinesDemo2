@@ -2,8 +2,8 @@
 
 package com.example.demokotlin2
 
-import com.egecius.coroutinesdemo.EgisException
-import com.egecius.coroutinesdemo.util.failingCoroutine
+import com.example.coroutinesdemo2.EgisException
+import com.example.coroutinesdemo2.util.failingCoroutine
 import kotlinx.coroutines.*
 import kotlinx.coroutines.test.runBlockingTest
 import kotlinx.coroutines.test.runTest

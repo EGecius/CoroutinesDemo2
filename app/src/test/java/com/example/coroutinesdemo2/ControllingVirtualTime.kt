@@ -1,4 +1,4 @@
-package com.egecius.coroutinesdemo
+package com.example.coroutinesdemo2
 
 import app.cash.turbine.test
 import io.kotest.matchers.shouldBe

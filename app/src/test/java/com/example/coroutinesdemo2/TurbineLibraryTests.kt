@@ -1,8 +1,8 @@
-package com.egecius.coroutinesdemo
+package com.example.coroutinesdemo2
 
 import app.cash.turbine.Event
 import app.cash.turbine.test
-import com.egecius.coroutinesdemo.util.neverEndingEmptyFlow
+import com.example.coroutinesdemo2.util.neverEndingEmptyFlow
 import io.kotest.matchers.shouldBe
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.TimeoutCancellationException

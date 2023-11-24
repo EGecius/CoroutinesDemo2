@@ -1,4 +1,4 @@
-package com.egecius.coroutinesdemo.mutex
+package com.example.coroutinesdemo2.mutex
 
 import io.kotest.matchers.shouldBe
 import kotlinx.coroutines.*

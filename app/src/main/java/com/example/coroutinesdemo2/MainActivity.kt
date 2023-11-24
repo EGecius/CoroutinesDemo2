@@ -1,4 +1,4 @@
-package com.egecius.coroutinesdemo
+package com.example.coroutinesdemo2
 
 import android.os.Bundle
 import android.util.Log
