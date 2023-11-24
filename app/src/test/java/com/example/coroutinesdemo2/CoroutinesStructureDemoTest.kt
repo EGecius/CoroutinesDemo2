@@ -2,7 +2,6 @@
 
 package com.egecius.coroutinesdemo
 
-import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import com.egecius.coroutinesdemo.util.MainCoroutineRule
 import io.kotest.matchers.shouldBe
 import kotlinx.coroutines.*
@@ -28,8 +27,8 @@ class CoroutinesStructureDemoTest {
 
     private var sut: AsyncAwaitActivity? = null
 
-    @get:Rule
-    var rule: TestRule = InstantTaskExecutorRule()
+//    @get:Rule
+//    var rule: TestRule = InstantTaskExecutorRule()
 
     @get:Rule
     var mainCoroutineRule = MainCoroutineRule()

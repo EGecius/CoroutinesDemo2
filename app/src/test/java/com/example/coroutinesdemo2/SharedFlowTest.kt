@@ -1,6 +1,5 @@
 package com.egecius.coroutinesdemo
 
-import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import app.cash.turbine.test
 import com.egecius.coroutinesdemo.util.MainCoroutineRule
 import io.kotest.matchers.shouldBe
@@ -21,8 +20,8 @@ class SharedFlowTest {
     @get:Rule
     val mainCoroutineRule = MainCoroutineRule()
 
-    @get: Rule
-    var instantTaskExecutorRule = InstantTaskExecutorRule()
+//    @get: Rule
+//    var instantTaskExecutorRule = InstantTaskExecutorRule()
 
     @Test
     fun `shared flow can be tested by converting to cold flow which will complete`() = runBlockingTest {

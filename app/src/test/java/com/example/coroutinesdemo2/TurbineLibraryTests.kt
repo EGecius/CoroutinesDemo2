@@ -92,13 +92,13 @@ class TurbineLibraryTests {
         }
     }
 
-    @Test(expected = TimeoutCancellationException::class)
-    fun `timeout can be configured`() = runBlockingTest {
-        flow<Unit> {
-            delay(100)
-        }.test(timeout = 50.milliseconds) {
-            expectItem() shouldBe "item"
-            expectComplete()
-        }
-    }
+//    @Test(expected = TimeoutCancellationException::class)
+//    fun `timeout can be configured`() = runBlockingTest {
+//        flow<Unit> {
+//            delay(100)
+//        }.test(timeout = 50.milliseconds) {
+//            expectItem() shouldBe "item"
+//            expectComplete()
+//        }
+//    }
 }

@@ -17,8 +17,8 @@ import org.mockito.junit.MockitoJUnitRunner
 @RunWith(MockitoJUnitRunner::class)
 class ConversionToCoroutinesDemoTest {
 
-    @get:Rule
-    var rule: TestRule = InstantTaskExecutorRule()
+//    @get:Rule
+//    var rule: TestRule = InstantTaskExecutorRule()
 
     @get:Rule
     var mainCoroutineRule = MainCoroutineRule()

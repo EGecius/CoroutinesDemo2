@@ -42,7 +42,7 @@ dependencies {
     implementation("com.google.android.material:material:1.10.0")
     testImplementation("junit:junit:4.13.2")
     testImplementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:1.6.4")
-    testImplementation("android.arch.core:core-testing:2.1.0")
+//    testImplementation("android.arch.core:core-testing:2.1.0")
     testImplementation("org.assertj:assertj-core:3.16.1")
     testImplementation("app.cash.turbine:turbine:0.3.0")
     testImplementation("io.kotest:kotest-assertions-core:4.3.2")
