@@ -33,8 +33,8 @@ class SharedFlowTest {
         val coldFlow: Flow<String> = mutableSharedFlow.take(1)
 
         coldFlow.test {
-            expectItem() shouldBe "event-1"
-            expectComplete()
+            awaitItem() shouldBe "event-1"
+            awaitComplete()
         }
     }
 }

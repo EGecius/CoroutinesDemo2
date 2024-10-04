@@ -38,7 +38,7 @@ class FlowExceptions {
             // will retry if this condition is met
             throwable is EgisException
         }.test {
-            assertThat(expectError().message).isEqualTo("from in RuntimeException")
+            assertThat(awaitError().message).isEqualTo("from in RuntimeException")
         }
 
         // count is 3: 1st as normal try + two as retries
@@ -50,7 +50,7 @@ class FlowExceptions {
         failingFlow.retry(retries = 1) { throwable ->
             throwable is EgisException
         }.test {
-            assertThat(expectError().message).isEqualTo("from EgisException")
+            assertThat(awaitError().message).isEqualTo("from EgisException")
         }
 
         // count is 2: 1st as normal try + 2nd as retry

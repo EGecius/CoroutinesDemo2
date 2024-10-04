@@ -21,8 +21,8 @@ class StateFlowTests {
         val stateFlow = MutableStateFlow(8)
 
         stateFlow.take(1).test {
-            expectItem() shouldBe 8
-            expectComplete()
+            awaitItem() shouldBe 8
+            awaitComplete()
         }
     }
 
@@ -45,8 +45,8 @@ class StateFlowTests {
         mutableStateFlow.emit(EgisData(9))
 
         mutableStateFlow.take(1).test {
-            expectItem() shouldBe EgisData(9)
-            expectComplete()
+            awaitItem() shouldBe EgisData(9)
+            awaitComplete()
         }
     }
     
@@ -60,8 +60,8 @@ class StateFlowTests {
 //        readOnlyStateFlow.emit()
 
         readOnlyStateFlow.take(1).test {
-            expectItem() shouldBe EgisData(2)
-            expectComplete()
+            awaitItem() shouldBe EgisData(2)
+            awaitComplete()
         }
     }
 }

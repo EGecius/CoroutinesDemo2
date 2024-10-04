@@ -6,6 +6,7 @@ import kotlinx.coroutines.*
 import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.test.advanceTimeBy
 import kotlinx.coroutines.test.runBlockingTest
+import kotlinx.coroutines.test.runTest
 import org.junit.Ignore
 import org.junit.Test
 import kotlin.time.ExperimentalTime
@@ -34,7 +35,7 @@ class ControllingVirtualTime {
 
     @Test
     @Ignore("for some reason does not work with Flow")
-    fun `shows how to control virtual time`() = runBlockingTest {
+    fun `shows how to control virtual time`() = runTest {
         val myFlow = flow {
             delay(1_000)
             emit(13)
@@ -42,8 +43,8 @@ class ControllingVirtualTime {
 
         myFlow.test {
             advanceTimeBy(2_000)
-            expectItem() shouldBe 13
-            expectComplete()
+            awaitItem() shouldBe 13
+            awaitComplete()
         }
     }
 

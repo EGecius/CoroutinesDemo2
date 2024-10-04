@@ -44,7 +44,7 @@ dependencies {
     testImplementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:1.6.4")
 //    testImplementation("android.arch.core:core-testing:2.1.0")
     testImplementation("org.assertj:assertj-core:3.16.1")
-    testImplementation("app.cash.turbine:turbine:0.3.0")
+    testImplementation("app.cash.turbine:turbine:1.1.0")
     testImplementation("io.kotest:kotest-assertions-core:4.3.2")
     testImplementation("io.mockk:mockk:1.12.0")
     testImplementation("org.mockito:mockito-core:3.2.4")

@@ -24,16 +24,16 @@ class TurbineLibraryTests {
     fun `asserts that certain items were emitted`() = runBlocking {
 
         flowOf(7, 9).test {
-            expectItem() shouldBe 7
-            expectItem() shouldBe 9
-            expectComplete()
+            awaitItem() shouldBe 7
+            awaitItem() shouldBe 9
+            awaitComplete()
         }
     }
 
     @Test(expected = TimeoutCancellationException::class)
     fun `checks if a flow completed`() = runBlocking {
         neverEndingEmptyFlow().test {
-            expectComplete()
+            awaitComplete()
         }
     }
 
@@ -54,23 +54,23 @@ class TurbineLibraryTests {
     @Test
     fun `allows to assert events with more detail`() = runBlockingTest {
         flowOf(67).test {
-            expectEvent() shouldBe Event.Item(67)
-            expectEvent() shouldBe Event.Complete
+            awaitEvent() shouldBe Event.Item(67)
+            awaitEvent() shouldBe Event.Complete
         }
     }
 
     @Test(expected = AssertionError::class)
     fun `fails if certain events are not complete`() = runBlockingTest {
         flowOf(1).test {
-            expectEvent() shouldBe 1
+            awaitEvent() shouldBe 1
         }
     }
 
     @Test
     fun `flows can be canceled at any time and will not require consuming a complete or error event`() = runBlockingTest {
         flowOf(1, 2, 3, 4).test {
-            expectItem() shouldBe 1
-            expectItem() shouldBe 2
+            awaitItem() shouldBe 1
+            awaitItem() shouldBe 2
             cancelAndConsumeRemainingEvents()
         }
     }
@@ -78,7 +78,7 @@ class TurbineLibraryTests {
     @Test
     fun `allows asserting errors`() = runBlockingTest {
         flow<Unit> { throw RuntimeException("broken!") }.test {
-            expectError().message shouldBe "broken!"
+            awaitError().message shouldBe "broken!"
         }
     }
 
@@ -87,8 +87,8 @@ class TurbineLibraryTests {
         flow<Unit> {
             delay(2000)
         }.test {
-            expectItem() shouldBe "item"
-            expectComplete()
+            awaitItem() shouldBe "item"
+            awaitComplete()
         }
     }
 
@@ -97,8 +97,8 @@ class TurbineLibraryTests {
 //        flow<Unit> {
 //            delay(100)
 //        }.test(timeout = 50.milliseconds) {
-//            expectItem() shouldBe "item"
-//            expectComplete()
+//            awaitItem() shouldBe "item"
+//            awaitComplete()
 //        }
 //    }
 }
