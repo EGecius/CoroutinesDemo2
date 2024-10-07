@@ -31,8 +31,8 @@ class TurbineLibraryTests {
         }
     }
 
-    @Test(expected = TimeoutCancellationException::class)
-    fun `checks if a flow completed`() = runBlocking {
+    @Test (expected = AssertionError::class)
+    fun `turbine emits TurbineAssertionError, if no value is produced within 3s`() = runTest {
         neverEndingEmptyFlow().test {
             awaitComplete()
         }
