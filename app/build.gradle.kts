@@ -49,6 +49,4 @@ dependencies {
     testImplementation("io.mockk:mockk:1.12.0")
     testImplementation("org.mockito:mockito-core:3.2.4")
     testImplementation("com.nhaarman.mockitokotlin2:mockito-kotlin:2.2.0")
-    androidTestImplementation("androidx.test.ext:junit:1.1.5")
-    androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
 }
