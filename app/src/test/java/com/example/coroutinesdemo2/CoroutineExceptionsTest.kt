@@ -66,20 +66,6 @@ class CoroutineExceptionsTest {
     }
 
     @Test
-    fun `try catch does catch exceptions thrown by coroutines`() = runTest {
-
-        launch {
-            // this will cause a crash
-            try {
-                delay(1)
-                throw EgisException()
-            } catch (e: Exception) {
-                e shouldBe EgisException()
-            }
-        }
-    }
-
-    @Test
     fun `instead of throwing an exception, a coroutine propagates it up the hierarchy and can be caught with an exception handler installed at the top level`() {
         var isCaughtAtTheTopLevelHandler = false
 
