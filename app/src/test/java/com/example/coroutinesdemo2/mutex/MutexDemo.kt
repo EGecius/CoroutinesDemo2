@@ -5,6 +5,7 @@ import kotlinx.coroutines.*
 import kotlinx.coroutines.sync.Mutex
 import kotlinx.coroutines.sync.withLock
 import kotlinx.coroutines.test.runTest
+import org.junit.ComparisonFailure
 import org.junit.Ignore
 import org.junit.Test
 import kotlin.system.measureTimeMillis
@@ -31,13 +32,16 @@ class MutexDemo {
         counter shouldBe 1000
     }
 
-    @Test
+    @Test (expected = ComparisonFailure::class)
     fun `without mutex incrementation will not work correctly`() = runTest {
         withContext(Dispatchers.Default) {
             run1kTimesOn10Coroutines {
                 counter++
+                // the bellow would fix the issue
+//                mutex.withLock {
+//                    counter++
+//                }
             }
-            println("Counter = $counter")
         }
         counter shouldBe 1000
     }
