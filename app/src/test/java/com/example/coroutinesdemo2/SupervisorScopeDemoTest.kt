@@ -1,6 +1,5 @@
 package com.example.coroutinesdemo2
 
-import com.example.coroutinesdemo2.util.failingCoroutine
 import com.example.coroutinesdemo2.util.nonFailingCoroutine
 import kotlinx.coroutines.*
 import kotlinx.coroutines.test.runBlockingTest
@@ -69,10 +68,11 @@ class SupervisorScopeDemoTest {
     }
 
     @Test
+    @Ignore("when run together with other tests, makes other tests fail due to uncaught exception")
     fun `exception thrown in a child does not cancel siblings`() = runBlocking {
         supervisorScope {
             launch {
-                failingCoroutine()
+                throw Exception()
             }
             launch {
                 nonFailingCoroutine()

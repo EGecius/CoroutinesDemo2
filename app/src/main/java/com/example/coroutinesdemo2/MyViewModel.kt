@@ -60,13 +60,4 @@ class MyViewModel : ViewModel() {
         delay(1_000)
     }
 
-    private suspend fun willFail() {
-        delay(1)
-        throw EgisException()
-    }
-
-    /** This shows how LiveData delegates to another LiveData */
-    val resultFromSoruce: LiveData<FakeItem> = selectedItemId.switchMap {
-        liveData { emitSource(fakeRepo.getLiveData()) }
-    }
 }

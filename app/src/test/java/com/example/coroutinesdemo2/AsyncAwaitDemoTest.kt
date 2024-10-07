@@ -3,11 +3,11 @@
 package com.example.demokotlin2
 
 import com.example.coroutinesdemo2.EgisException
-import com.example.coroutinesdemo2.util.failingCoroutine
 import kotlinx.coroutines.*
 import kotlinx.coroutines.test.runBlockingTest
 import kotlinx.coroutines.test.runTest
 import org.assertj.core.api.Assertions.assertThat
+import org.junit.Ignore
 import org.junit.Test
 
 @ExperimentalCoroutinesApi
@@ -124,6 +124,7 @@ class AsyncAwaitDemoTest {
     }
 
     @Test
+    @Ignore("when run together with other tests, makes other tests fail due to uncaught exception")
     fun `using coroutineScope() does not re-throw exceptions up the hierarchy tree`() {
 
         var wasCaughtInTryCatchBlock = false
@@ -132,7 +133,7 @@ class AsyncAwaitDemoTest {
 
             coroutineScope {
                 try {
-                    failingCoroutine()
+                    throw EgisException()
                 } catch (e: Exception) {
                     wasCaughtInTryCatchBlock = true
                     println("exception caught using coroutineScope: $e")

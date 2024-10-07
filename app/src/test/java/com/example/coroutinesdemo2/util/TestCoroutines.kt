@@ -22,11 +22,6 @@ fun neverEndingEmittingFlow(): Flow<Unit> {
     }
 }
 
-suspend fun failingCoroutine() {
-    delay(1)
-    throw EgisException()
-}
-
 
 suspend fun nonFailingCoroutine() {
     delay(10)
