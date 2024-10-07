@@ -21,7 +21,7 @@ class BasicsTest {
 
     @Test
     fun `having 100k coroutines complete takes less than 1s`() = runBlocking {
-        val deferredList: List<Deferred<Int>> = (1..1000_000).map { n ->
+        val deferredList: List<Deferred<Int>> = (1..100_000).map { n ->
             GlobalScope.async {
                 n
             }
