@@ -20,19 +20,8 @@ import java.lang.Thread.sleep
 @RunWith(MockitoJUnitRunner::class)
 class CoroutinesStructureDemoTest {
 
-    private var sut: AsyncAwaitActivity? = null
-
-//    @get:Rule
-//    var rule: TestRule = InstantTaskExecutorRule()
-
     @get:Rule
     var mainCoroutineRule = MainCoroutineRule()
-
-    @Before
-    fun setUp() {
-        sut = AsyncAwaitActivity()
-    }
-
 
     @Test
     fun `job's isComplete property returns true after it finishes`() = runBlockingTest {
