@@ -4,6 +4,7 @@ import io.kotest.matchers.shouldBe
 import kotlinx.coroutines.*
 import kotlinx.coroutines.sync.Mutex
 import kotlinx.coroutines.sync.withLock
+import org.junit.Ignore
 import org.junit.Test
 import kotlin.system.measureTimeMillis
 
@@ -41,6 +42,7 @@ class MutexDemo {
     }
 
     @Test
+    @Ignore("the test will never finish")
     fun `using 2 locks produces a deadlock - the test will never finish`() = runBlocking {
         mutex.withLock {
             mutex.withLock {
