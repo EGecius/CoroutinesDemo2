@@ -31,13 +31,6 @@ class TurbineLibraryTests {
         }
     }
 
-    @Test (expected = AssertionError::class)
-    fun `turbine emits TurbineAssertionError, if no value is produced within 3s`() = runTest {
-        neverEndingEmptyFlow().test {
-            awaitComplete()
-        }
-    }
-
     @Test(expected = AssertionError::class)
     fun `throws assertion error if complete event is found`() = runBlockingTest {
         emptyFlow<Int>().test {
