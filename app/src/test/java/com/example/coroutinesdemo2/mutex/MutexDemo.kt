@@ -4,6 +4,7 @@ import io.kotest.matchers.shouldBe
 import kotlinx.coroutines.*
 import kotlinx.coroutines.sync.Mutex
 import kotlinx.coroutines.sync.withLock
+import kotlinx.coroutines.test.runTest
 import org.junit.Ignore
 import org.junit.Test
 import kotlin.system.measureTimeMillis
@@ -31,7 +32,7 @@ class MutexDemo {
     }
 
     @Test
-    fun `without mutex incrementation will not work correctly`() = runBlocking {
+    fun `without mutex incrementation will not work correctly`() = runTest {
         withContext(Dispatchers.Default) {
             run1kTimesOn10Coroutines {
                 counter++
