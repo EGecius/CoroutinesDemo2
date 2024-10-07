@@ -7,8 +7,10 @@ import com.example.coroutinesdemo2.util.MainCoroutineRule
 import com.example.coroutinesdemo2.util.failingCoroutine
 import com.example.coroutinesdemo2.EgisException
 import com.example.coroutinesdemo2.MyViewModel
+import io.kotest.matchers.shouldBe
 import kotlinx.coroutines.*
 import kotlinx.coroutines.test.runBlockingTest
+import kotlinx.coroutines.test.runTest
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.Rule
 import org.junit.Test
@@ -63,14 +65,16 @@ class CoroutineExceptionsTest {
         assertThat(resultThrowable?.message).isEqualTo("egis")
     }
 
-    @Test(expected = EgisException::class)
-    fun `very unintuitively, try catch does not catch exceptions thrown by coroutines`() = runBlockingTest {
+    @Test
+    fun `try catch does catch exceptions thrown by coroutines`() = runTest {
 
         launch {
             // this will cause a crash
             try {
-                failingCoroutine()
+                delay(1)
+                throw EgisException()
             } catch (e: Exception) {
+                e shouldBe EgisException()
             }
         }
     }
