@@ -18,7 +18,7 @@ class MutexDemo {
     fun `with mutex incrementation is done correctly`() = runBlocking {
 
         withContext(Dispatchers.Default) {
-            run1kTimes {
+            run1kTimesOn10Coroutines {
                 // protect each increment with lock
                 mutex.withLock {
                     counter++
@@ -33,7 +33,7 @@ class MutexDemo {
     @Test
     fun `without mutex incrementation will not work correctly`() = runBlocking {
         withContext(Dispatchers.Default) {
-            run1kTimes {
+            run1kTimesOn10Coroutines {
                 counter++
             }
             println("Counter = $counter")
@@ -51,7 +51,7 @@ class MutexDemo {
     }
 }
 
-suspend fun run1kTimes(action: suspend () -> Unit) {
+suspend fun run1kTimesOn10Coroutines(action: suspend () -> Unit) {
     val noOfCoroutines = 10  // number of coroutines to launch
     val noOfActions = 100 // times an action is repeated by each coroutine
     val time = measureTimeMillis {
