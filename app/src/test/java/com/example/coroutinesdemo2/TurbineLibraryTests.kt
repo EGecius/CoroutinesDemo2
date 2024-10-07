@@ -12,6 +12,7 @@ import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.flow.flowOf
 import kotlinx.coroutines.runBlocking
 import kotlinx.coroutines.test.runBlockingTest
+import kotlinx.coroutines.test.runTest
 import org.junit.Test
 import kotlin.time.ExperimentalTime
 import kotlin.time.milliseconds
@@ -82,12 +83,11 @@ class TurbineLibraryTests {
         }
     }
 
-    @Test(expected = TimeoutCancellationException::class)
-    fun `times out after 1s`() = runBlockingTest {
+    @Test
+    fun `does not use real time in coroutines - even long delays are executed instantly using virtual time`() = runTest {
         flow<Unit> {
-            delay(2000)
+            delay(10_000)
         }.test {
-            awaitItem() shouldBe "item"
             awaitComplete()
         }
     }
